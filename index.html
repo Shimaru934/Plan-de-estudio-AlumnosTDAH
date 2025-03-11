@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes con TDAH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Estudiantes con TDAH</h1>
+
+        <!-- Formulario de Registro de Estudiantes -->
+        <form id="student-form">
+            <label for="student-name">Nombre del Estudiante:</label>
+            <input type="text" id="student-name" required>
+
+            <label for="student-grade">Grado:</label>
+            <input type="text" id="student-grade" required>
+
+            <label for="tdah-type">Tipo de TDAH:</label>
+            <select id="tdah-type" required>
+                <option value="Inatención">Inatención</option>
+                <option value="Hiperactividad">Hiperactividad</option>
+                <option value="Impulsividad">Impulsividad</option>
+            </select>
+
+            <button type="submit">Registrar Estudiante</button>
+        </form>
+
+        <!-- Filtro por tipo de TDAH -->
+        <div class="filter-container">
+            <label for="filter-tdah">Filtrar por Tipo de TDAH:</label>
+            <select id="filter-tdah">
+                <option value="todos">Todos</option>
+                <option value="Inatención">Inatención</option>
+                <option value="Hiperactividad">Hiperactividad</option>
+                <option value="Impulsividad">Impulsividad</option>
+            </select>
+        </div>
+
+        <!-- Tabla para Mostrar los Estudiantes Registrados -->
+        <h2>Lista de Estudiantes Registrados</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Grado</th>
+                        <th>Tipo de TDAH</th>
+                        <th>Fecha de Diagnóstico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán los estudiantes dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Generación de Plan de Estudio -->
+        <h2>Generar Plan de Estudio Personalizado</h2>
+        <div id="plan-container">
+            <p>Seleccione un estudiante para generar un plan de estudio personalizado.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
